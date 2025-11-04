@@ -581,7 +581,7 @@ function bootstrapOnOpenSuseLeap ()
             ## Compile SDL3 locally
             # opensuse_sdl3_prequisites 
             # get_and_build_sdl3
-            opensuse_sdl3_add_repo("${LINUX_VERSION_ID}")
+            opensuse_sdl3_add_repo(${LINUX_VERSION_ID})
         ;;
     esac
     

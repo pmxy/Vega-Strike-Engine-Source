@@ -110,8 +110,8 @@ opensuse_sdl3_add_repo() {
     zypper --gpg-auto-import-keys ref
     zypper addrepo https://download.opensuse.org/repositories/games/${1}/games.repo
     zypper refresh
-    zypper install SDL3-devel
-    zypper install SDL3_image-devel
+    zypper --no-gpgckeck install SDL3-devel
+    zypper --no-gpgckeck install SDL3_image-devel
 }
 
 if [ -f /etc/os-release ]

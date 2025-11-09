@@ -43,6 +43,10 @@ jobs:
             COMPILER: 'gcc'
             preset-name: 'linux-unix-makefiles-pie-enabled-glvnd-RelWithDebInfo'
             allow_failure: true
+          - FROM:     'fedora:43'
+            COMPILER: 'gcc'
+            preset-name: 'linux-unix-makefiles-pie-enabled-glvnd-RelWithDebInfo'
+            allow_failure: true            
           # - FROM:     'fedora:41'
           #   COMPILER: 'clang'
           #   preset-name: 'linux-unix-makefiles-pie-enabled-glvnd-RelWithDebInfo'

@@ -536,10 +536,10 @@ function bootstrapOnOpenSuseLeap ()
         "16.0")
             zypper --non-interactive refresh
 ## pmx20251104 The following 2 lines (busybox) may only be relevant to the docker image I use for testing (?)
-            set -o errexit
-            zypper --non-interactive remove busybox-which
-            zypper --non-interactive remove busybox-xz    
-            set +o errexit         
+            # set -o errexit
+            # zypper --non-interactive remove busybox-which
+            # zypper --non-interactive remove busybox-xz    
+            # set +o errexit         
             zypper --non-interactive install -y \
                                     libboost_log1_86_0-devel \
                                     libboost_python-py3-1_86_0-devel \
@@ -582,9 +582,9 @@ function bootstrapOnOpenSuseLeap ()
     case "${LINUX_VERSION_ID}" in
         "16.0"|"15.6")
             ## Compile SDL3 locally
-            # opensuse_sdl3_prequisites 
-            # get_and_build_sdl3
-            opensuse_sdl3_add_repo "${LINUX_VERSION_ID}"
+            opensuse_sdl3_prequisites 
+            get_and_build_sdl3
+            # opensuse_sdl3_add_repo "${LINUX_VERSION_ID}"
         ;;
     esac
     
